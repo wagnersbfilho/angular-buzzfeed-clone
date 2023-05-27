@@ -2,6 +2,7 @@
 
 #### Conceitos
     - Componentes
+    - Diretivas (estruturais/atributos)
     
 #### Requisitos
     - Angular 16.0.2
