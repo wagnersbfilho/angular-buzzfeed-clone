@@ -3,6 +3,7 @@
 #### Conceitos
     - Componentes
     - Diretivas (estruturais/atributos)
+    - Reduce
     
 #### Requisitos
     - Angular 16.0.2

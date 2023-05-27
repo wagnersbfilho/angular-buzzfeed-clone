@@ -3,17 +3,22 @@
     <img src="assets/imgs/logo.png">
     <h3>{{title}}</h3>
   </div>
-  <div class="quizz_questions">
-    <h3>{{questionSelected.question}}</h3>
-  </div>
-  <div class="quizz_options">
-    <button class="btn-option">
-      optioname
-    </button>
+
+  <div *ngIf="!result" class="questions">
+    <div class="quizz_questions">
+      <h3>{{questionSelected.question}}</h3>
+    </div>
+    <div class="quizz_options">
+      <button class="btn-option"
+              *ngFor="let option of questionSelected.options"
+              (click)="playerChoice(option.alias)">
+        {{option.name}}
+      </button>
+    </div>
   </div>
 
   <div *ngIf="finished" class="quizz_results">
     <h1>O seu resultado é:</h1>
-    <p>Respsota selecionada</p>
+    <p>{{answerResult}}</p>
   </div>
 </div>
